@@ -1,0 +1,198 @@
+:root{--ink:#254a40;--muted:#586c60;--accent:#4d8269;--paper:#f1f0e8;--line:#ccd5c8;--page-progress:0}
+html,body,.subsite{background:var(--paper);color:var(--ink)}body{overflow-x:hidden}
+body header.subsite-nav{position:fixed;inset:0 0 auto;z-index:50;height:84px;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;background:rgba(241,240,232,.92);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.subsite-nav .brand img{width:94px;height:auto;filter:brightness(0);opacity:.75}
+.subsite-nav nav{display:flex;gap:2.4rem}.subsite-nav nav a{position:relative;font-size:.79rem;color:var(--muted);padding:.65rem 0}
+.subsite-nav nav a.is-active{color:var(--ink)}.subsite-nav nav a.is-active:after{content:"";position:absolute;inset:auto 0 0;height:1px;background:currentColor}
+.subsite-home{font-size:.76rem}.subsite-home span{margin-left:1rem}
+.subsite-hero{position:relative;min-height:850px;height:100svh;max-height:1100px;padding:130px 6vw 90px;display:flex;align-items:center;isolation:isolate;overflow:hidden}
+.subsite-hero-copy{width:45%;position:relative;z-index:2}
+h1,h2,h3,p{margin:0}
+.subsite-hero h1{font:400 clamp(3.8rem,6vw,7rem)/1.01 Georgia,serif;letter-spacing:-.062em;color:var(--ink);text-wrap:balance}
+.subsite-hero h1 .accent{font-style:italic;color:var(--accent)}
+.subsite-hero-copy>p{max-width:440px;font-size:1.04rem;line-height:1.8;color:var(--muted);margin-top:1.8rem}
+.subsite-scene{position:absolute;left:43%;right:-2%;top:94px;bottom:30px;z-index:0}
+.subsite-scene canvas{display:block;width:100%;height:100%}
+.scene-fallback:after{content:"Concept visualization";position:absolute;inset:25%;display:grid;place-items:center;border:1px solid var(--line);font-size:.8rem;color:var(--muted)}
+.subsite h2{font:400 clamp(2.6rem,4.3vw,5.4rem)/1.08 Georgia,serif;letter-spacing:-.047em;color:var(--ink);text-wrap:balance}
+.subsite h2 em{font-weight:400;color:var(--accent)}
+.subsite h3{font-size:1.12rem;font-weight:500;letter-spacing:-.02em;color:var(--ink)}
+.subsite section p{font-size:1rem;line-height:1.85;color:var(--muted)}
+.subsite-next{padding:7rem 8vw;background:#e4e9dc;border-top:1px solid var(--line)}
+.subsite-next>p{max-width:540px;margin-top:1.5rem}.subsite-next>div{margin-top:2rem}
+.subsite-next a{display:inline-flex;align-items:center;gap:3rem;border-bottom:1px solid var(--accent);padding:.75rem 0;font-size:.83rem}
+.subsite-next a b{font-weight:400;transition:transform .25s}.subsite-next a:hover b{transform:translate(3px,-3px)}
+.subsite-footer{padding:2rem 5vw!important;display:flex!important;justify-content:space-between!important;align-items:center;background:#e4e9dc!important;border-top:1px solid var(--line)!important;color:var(--muted)}
+.subsite-footer>div{display:flex;align-items:center;gap:2rem}.subsite-footer img{width:78px;filter:brightness(0);opacity:.6}.subsite-footer span{font-size:.67rem}
+
+/* The invention: a centred spatial instrument and a conceptual reading sequence. */
+body[data-scene="model"] .subsite-hero{height:950px;max-height:none;min-height:0;display:block;text-align:center;padding:142px 8vw 0}
+body[data-scene="model"] .subsite-hero-copy{width:100%;max-width:1000px;margin:0 auto}
+body[data-scene="model"] .subsite-hero h1{font-size:clamp(3.7rem,5.6vw,6.4rem)}
+body[data-scene="model"] .subsite-hero-copy>p{max-width:610px;margin:1.6rem auto 0}
+body[data-scene="model"] .subsite-scene{left:12%;right:12%;top:auto;bottom:15px;height:530px;background:radial-gradient(ellipse at center,#dde6d651,transparent 68%)}
+.invention-thesis{padding:6rem 9vw;display:grid;grid-template-columns:1.35fr 1fr;gap:10%;align-items:center;border-top:1px solid var(--line)}
+.invention-thesis p.thesis-lead{font:400 clamp(2rem,3.1vw,3.8rem)/1.18 Georgia,serif;letter-spacing:-.035em;color:var(--ink)}
+.model-anatomy{padding:7rem 9vw;display:grid;grid-template-columns:1fr 1fr;gap:12%;background:#e3eadc}
+.section-intro>p{max-width:420px;margin-top:2rem}
+.model-fields>div{padding:1.6rem 0;display:grid;grid-template-columns:110px 1fr;gap:1.5rem;border-bottom:1px solid #bdceba}
+.model-fields>div:first-child{padding-top:0}.model-fields dt{font-size:.9rem;font-weight:500}.model-fields dd{font-size:.94rem;line-height:1.8;color:var(--muted)}
+.adaptive-section{padding:7rem 9vw 8rem}.adaptive-section>div:first-child{display:grid;grid-template-columns:1.25fr 1fr;gap:10%;align-items:center}
+.inference-loop{position:relative;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:3.5rem 3rem;margin:3.5rem 0 0;background:#e8ecdf}
+.inference-loop span{font:400 clamp(1.2rem,2.3vw,2.4rem)/1.2 Georgia,serif}.inference-loop i{font-style:normal;color:#8fa289}
+.loop-return{position:absolute;inset:auto 3rem -18px;height:18px;border:1px solid #9aaf90;border-top:none;border-radius:0 0 15px 15px}
+.applications-section{padding:6rem 9vw;background:#284d40;color:#eef1e2}
+.applications-section h2{color:#eef1e2}.applications-section h2 em{color:#b3d2a5}.applications-section p{max-width:660px;margin-top:2rem;color:#c4d2bd!important}
+.application-types{display:flex;flex-wrap:wrap;gap:1.2rem 3rem;margin-top:3rem;padding-top:1.6rem;border-top:1px solid #65836c}
+.application-types span{font-size:.83rem;color:#d5e2cc}
+
+/* Infrastructure: a distributed field, followed by a wide network plan. */
+body[data-scene="network"]{--paper:#e5ece5;--ink:#214b43;--accent:#36816e}
+body[data-scene="network"] header.subsite-nav{background:rgba(229,236,229,.94)}
+body[data-scene="network"] .subsite-scene{background:radial-gradient(ellipse,#cbded055,transparent 70%)}
+.network-principle{padding:6rem 8vw 3rem;display:grid;grid-template-columns:1fr 1fr;gap:10%;align-items:center;border-top:1px solid var(--line)}
+.network-map-section{padding:0 8vw 6rem}.network-map{color:#427b65;margin:0 auto;max-width:1100px}.network-map svg{display:block;width:100%}
+.network-notes{display:grid;grid-template-columns:repeat(3,1fr);gap:4rem;margin-top:2rem}.network-notes article{border-top:1px solid #a8beb0;padding-top:1.5rem}.network-notes p{margin-top:1rem;font-size:.93rem!important}
+.deployment-section{padding:7rem 8vw;display:grid;grid-template-columns:1.2fr 1fr;gap:12%;background:#f2f2e9}
+.deployment-section>div>p{margin-top:2rem;max-width:540px}.deployment-details article+article{border-top:1px solid var(--line);margin-top:2rem;padding-top:2rem}.deployment-details p{margin-top:1rem}
+.network-closing{padding:6rem 8vw;background:#d1dfd2}.network-closing p{font:400 clamp(2rem,3.5vw,4rem)/1.23 Georgia,serif!important;letter-spacing:-.035em;color:#284d40!important}.network-closing em{color:#56876b}
+
+/* Automotive: a dedicated vehicle study and use-case-led content. */
+body[data-scene="vehicle"] .subsite-hero{background:#1e423b}
+body[data-scene="vehicle"] .subsite-hero h1{color:#f0eedf}
+body[data-scene="vehicle"] .subsite-hero h1 .accent{color:#c6d5b0}
+body[data-scene="vehicle"] .subsite-hero-copy>p{color:#c0d0c0}
+body[data-scene="vehicle"] header.subsite-nav{background:rgba(30,66,59,.94);border-color:#44645a;color:#eef0df}
+body[data-scene="vehicle"] .subsite-nav .brand img{filter:brightness(0) invert(1);opacity:.9}
+body[data-scene="vehicle"] .subsite-nav nav a{color:#b1c3b4}body[data-scene="vehicle"] .subsite-nav nav a.is-active{color:#eef0df}
+body[data-scene="vehicle"] .subsite-scene{background:radial-gradient(ellipse,#47634b80,transparent 65%)}
+.automotive-scenario{padding:6rem 8vw;display:grid;grid-template-columns:1fr 1fr;gap:9%;align-items:center}
+.scenario-drawing{color:#3b6a58;background:#e4e8db}.scenario-drawing svg{display:block;width:100%}
+.automotive-scenario p{margin-top:1.8rem}.automotive-scenario p.scenario-note{font-size:.75rem;color:#738373}
+.mobility-cases{padding:6rem 12vw;background:#e2e7da}.mobility-cases h2{max-width:850px;margin-bottom:3rem}
+.mobility-cases details{padding:1.5rem 0;border-top:1px solid #b4c6ae}
+.mobility-cases summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;font-size:1.07rem;cursor:pointer;list-style:none}.mobility-cases summary::-webkit-details-marker{display:none}
+.mobility-cases summary span{font-size:1.6rem;font-weight:300;transition:transform .2s}
+.mobility-cases details[open] summary span{transform:rotate(45deg)}
+.mobility-cases details p{max-width:690px;padding-top:1rem;padding-right:2rem}
+.integration-section{padding:7rem 8vw}.integration-columns{display:grid;grid-template-columns:1fr 1fr;gap:10%;margin-top:3rem}
+.integration-columns article{border-top:1px solid var(--line);padding-top:1.6rem}.integration-columns p{margin-top:1rem;max-width:530px}
+
+/* Quiet, accessible interaction shared across the three experiences. */
+.skip-link{position:fixed;top:8px;left:8px;z-index:200;padding:10px 16px;background:var(--paper);color:var(--ink);transform:translateY(-150%)}
+.skip-link:focus{transform:translateY(0)}
+a:focus-visible,summary:focus-visible{outline:2px solid #8aa577;outline-offset:6px}
+.page-progress{position:fixed;top:0;left:0;z-index:90;width:100%;height:2px;background:#a7b88a;transform:scaleX(var(--page-progress));transform-origin:left;pointer-events:none}
+.page-wash{position:fixed;inset:0;z-index:100;background:var(--paper);transform:scaleY(0);transform-origin:bottom;pointer-events:none;transition:transform .28s ease}
+body.is-leaving .page-wash{transform:scaleY(1)}
+.content-reveal{transition:opacity .65s ease,transform .8s cubic-bezier(.16,1,.3,1)}
+body.motion-ready .content-reveal:not(.in-view){opacity:0;transform:translateY(20px)}
+
+@media(max-width:900px){
+ body header.subsite-nav{height:110px;padding:14px 6vw 50px}
+ .subsite-nav nav{position:absolute;bottom:10px;left:6vw;right:6vw;justify-content:space-between;gap:1rem}.subsite-nav nav a{font-size:.74rem;padding:.35rem 0}.subsite-home{font-size:.7rem}
+ .subsite-hero,body[data-scene="model"] .subsite-hero{display:flex;flex-direction:column;align-items:stretch;padding:155px 7vw 0;height:auto;min-height:0;max-height:none;text-align:left}
+ .subsite-hero-copy,body[data-scene="model"] .subsite-hero-copy{width:100%;max-width:650px;order:0;margin:0}
+ .subsite-hero h1,body[data-scene="model"] .subsite-hero h1{font-size:clamp(3.3rem,8vw,5rem)}
+ .subsite-hero-copy>p,body[data-scene="model"] .subsite-hero-copy>p{margin:1.5rem 0 0;max-width:570px}
+ .subsite-scene,body[data-scene="model"] .subsite-scene{position:relative;inset:auto;order:1;width:112%;margin-left:-6%;height:460px}
+ .invention-thesis,.network-principle{padding:4rem 7vw;gap:3rem}
+ .model-anatomy,.deployment-section{padding:5rem 7vw;gap:3rem}
+ .adaptive-section{padding:5rem 7vw}.adaptive-section>div:first-child{gap:3rem}
+ .network-notes{gap:2rem}.automotive-scenario{padding:4rem 7vw;gap:3rem}.mobility-cases{padding:5rem 7vw}
+ .subsite-next{padding:5rem 7vw}
+}
+@media(max-width:600px){
+ .subsite-hero h1,body[data-scene="model"] .subsite-hero h1{font-size:3.25rem}
+ .subsite-hero-copy>p{font-size:.96rem!important}
+ .subsite-scene,body[data-scene="model"] .subsite-scene{height:360px}
+ .subsite h2{font-size:2.65rem}.subsite section p{font-size:.95rem}
+ .invention-thesis,.model-anatomy,.adaptive-section>div:first-child,.network-principle,.deployment-section,.automotive-scenario,.integration-columns{grid-template-columns:1fr;gap:2.5rem}
+ .invention-thesis p.thesis-lead{font-size:2.25rem}
+ .model-fields>div{grid-template-columns:90px 1fr;gap:1rem}
+ .inference-loop{display:grid;grid-template-columns:1fr 20px 1fr;padding:2rem 1.2rem;gap:2rem .7rem}.inference-loop i:nth-of-type(2){display:none}.inference-loop span{font-size:1.45rem}.loop-return{left:1.2rem;right:1.2rem}
+ .applications-section,.network-closing{padding:4rem 7vw}.application-types{gap:1rem 2rem}
+ .network-map-section{padding:0 7vw 4rem}.network-map{margin:0 -5vw}.network-notes{grid-template-columns:1fr;gap:2rem}
+ .scenario-drawing{max-width:420px;margin:auto}.integration-section{padding:4rem 7vw}
+ .subsite-footer{align-items:flex-start!important;gap:1.5rem}.subsite-footer>div{flex-direction:column;align-items:flex-start;gap:1rem}.subsite-footer span{font-size:.61rem;max-width:145px}
+}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}.content-reveal{opacity:1!important;transform:none!important}}
+
+/* Automotive: an editorial road study. */
+body[data-scene="vehicle"]{--paper:#f3f1e8;--ink:#29493e;--accent:#718166;--muted:#626e60}
+body[data-scene="vehicle"] header.subsite-nav{background:rgba(243,241,232,.94);color:var(--ink);border-color:#d5d9ca}
+body[data-scene="vehicle"] .subsite-nav .brand img{filter:brightness(0);opacity:.75}
+body[data-scene="vehicle"] .subsite-nav nav a{color:var(--muted)}
+body[data-scene="vehicle"] .subsite-nav nav a.is-active{color:var(--ink)}
+body[data-scene="vehicle"] .subsite-hero{display:block;height:1100px;max-height:none;min-height:0;padding:155px 7vw 0;background:var(--paper)}
+body[data-scene="vehicle"] .subsite-hero-copy{width:100%;display:grid;grid-template-columns:1.4fr .7fr;align-items:end;gap:8%;max-width:none}
+body[data-scene="vehicle"] .subsite-hero h1{font-size:clamp(50px,5.7vw,86px);color:var(--ink);line-height:1.02;text-wrap:initial}
+body[data-scene="vehicle"] .subsite-hero h1 .accent{color:var(--accent)}
+body[data-scene="vehicle"] .subsite-hero-copy>p{font-size:15px;color:var(--muted);max-width:350px;margin:0 0 8px;line-height:1.8}
+body[data-scene="vehicle"] .subsite-scene{inset:360px 0 75px;background:radial-gradient(ellipse at center,#dbe1d0 0%,transparent 66%);width:auto;margin:0;height:auto}
+.auto-view-control{position:absolute;z-index:3;top:380px;left:7vw}
+.auto-view-buttons{display:flex;border:1px solid #bec9b8;border-radius:50px;padding:4px;background:#f3f1e8}
+.auto-view-buttons button{font:inherit;font-size:11px;padding:12px 20px;border:0;border-radius:50px;background:transparent;color:#53634f;cursor:pointer;transition:background .25s,color .25s}
+.auto-view-buttons button[aria-pressed="true"]{background:#29493e;color:#f3f1e8}
+.auto-view-buttons button:focus-visible{outline:2px solid #718166;outline-offset:4px}
+.subsite .auto-view-control p{font-size:11px;margin:12px 0 0 8px;color:#6f7968}
+.auto-scene-legend{position:absolute;bottom:35px;left:7vw;right:7vw;display:flex;gap:26px;align-items:center;border-top:1px solid #ccd2c2;padding-top:20px;font-size:10px;color:#65705e}
+.auto-scene-legend span{display:flex;align-items:center;gap:8px}
+.auto-scene-legend i{width:6px;height:6px;background:#348a78;border-radius:50%}
+.auto-scene-legend span:nth-child(2) i{background:#b77a40}
+.auto-scene-legend small{margin-left:auto;font-size:10px}
+.auto-perspective{padding:100px 9vw;display:grid;grid-template-columns:1.25fr 1fr;gap:12%;border-top:1px solid #d5d9ca}
+.auto-eyebrow{display:block;font-size:11px;color:#6c7964;margin-bottom:28px}
+.auto-perspective h2,.auto-responsibility h2{font-size:clamp(38px,4vw,62px)}
+.auto-explanation p+p{margin-top:20px}
+.auto-explanation small{display:block;font-size:11px;line-height:1.8;color:#798070;margin-top:28px}
+.auto-context{padding:95px 9vw;background:#e4e8dc}
+.auto-context-heading{display:flex;justify-content:space-between;align-items:end;gap:60px}
+.auto-context-heading h2{font-size:clamp(40px,4.5vw,66px)}
+.auto-context-heading p{max-width:290px}
+.auto-evidence{display:grid;grid-template-columns:repeat(3,1fr);gap:6%;margin-top:65px}
+.auto-evidence article{border-top:1px solid #b7c4ac;padding-top:30px}
+.auto-evidence p{font-size:14px!important;margin-top:18px}
+.evidence-mark{display:block;width:42px;height:42px;margin-bottom:30px;position:relative;color:#718567}
+.position-mark{border:1px solid;border-radius:50%}
+.position-mark:after{content:"";position:absolute;inset:14px;border-radius:50%;background:currentColor}
+.motion-mark{border-top:1px solid;border-bottom:1px solid;transform:skew(-30deg);height:25px;margin-top:8px;margin-bottom:39px}
+.motion-mark:after{content:"";position:absolute;inset:11px 0 auto;border-top:1px solid}
+.confidence-mark{border:1px dashed;border-radius:50%}
+.confidence-mark:after{content:"";position:absolute;inset:9px;border:1px solid;border-radius:50%}
+.auto-responsibility{padding:110px 9vw;display:grid;grid-template-columns:1.25fr 1fr;gap:12%}
+.auto-responsibility p+p{margin-top:20px}
+.auto-responsibility a{display:inline-flex;gap:35px;border-bottom:1px solid #a4b499;padding:12px 0;margin-top:25px;font-size:12px}
+body[data-scene="vehicle"] .subsite-next{background:#29493e;border:0}
+body[data-scene="vehicle"] .subsite-next h2{color:#f0eee2}
+body[data-scene="vehicle"] .subsite-next h2 em{color:#bfcdb0}
+body[data-scene="vehicle"] .subsite-next p,body[data-scene="vehicle"] .subsite-next a{color:#c9d1bf}
+@media(max-width:900px){
+ body[data-scene="vehicle"] .subsite-hero{height:1050px;padding:155px 7vw 0}
+ body[data-scene="vehicle"] .subsite-hero-copy{display:block}
+ body[data-scene="vehicle"] .subsite-hero-copy>p{margin-top:25px;max-width:480px}
+ body[data-scene="vehicle"] .subsite-scene{position:absolute;inset:480px -10% 65px}
+ .auto-view-control{top:425px}
+ .auto-perspective,.auto-responsibility{padding:70px 7vw;gap:6%}
+ .auto-context{padding:70px 7vw}
+}
+@media(max-width:600px){
+ body[data-scene="vehicle"] .subsite-hero{height:940px;padding-top:150px}
+ body[data-scene="vehicle"] .subsite-hero h1{font-size:46px}
+ body[data-scene="vehicle"] .subsite-hero-copy>p{font-size:14px!important;line-height:1.75}
+ body[data-scene="vehicle"] .subsite-scene{inset:480px -20% 80px}
+ .auto-view-control{top:420px;left:7vw;right:7vw}
+ .auto-view-buttons{width:max-content;max-width:100%}
+ .auto-view-buttons button{padding:11px 16px}
+ .auto-scene-legend{gap:16px;flex-wrap:wrap;font-size:9px;bottom:25px}
+ .auto-scene-legend small{width:100%;margin:0;font-size:9px}
+ .auto-perspective,.auto-responsibility{grid-template-columns:1fr;gap:32px;padding:65px 7vw}
+ .auto-context-heading{display:block}
+ .auto-context-heading p{margin-top:25px}
+ .auto-evidence{grid-template-columns:1fr;gap:35px;margin-top:40px}
+ .auto-evidence article{position:relative;padding-left:65px;padding-top:25px}
+ .evidence-mark{position:absolute;left:0;top:25px;width:35px;height:35px}
+ .position-mark:after{inset:11px}
+ .motion-mark{height:25px}
+ .auto-evidence p{margin-top:12px}
+}
